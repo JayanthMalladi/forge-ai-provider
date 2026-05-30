@@ -1,0 +1,48 @@
+{
+  "name": "@voxell/forge-ai-provider",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK provider for Forge — Voxell's text-embedding API. turbo/pro/ultra (ultra = Qwen3-Embedding-8B; ~75+ avg MTEB, #4 English, top usable model), Matryoshka dims.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai-sdk",
+    "vercel-ai-sdk",
+    "embeddings",
+    "text-embedding",
+    "forge",
+    "voxell",
+    "provider",
+    "rag"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoxellInc/forge-ai-provider.git"
+  },
+  "homepage": "https://github.com/VoxellInc/forge-ai-provider#readme",
+  "bugs": "https://github.com/VoxellInc/forge-ai-provider/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ai-sdk/provider": "^3.0.10"
+  },
+  "peerDependencies": {
+    "ai": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "ai": "^6.0.193",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}

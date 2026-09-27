@@ -1,7 +1,7 @@
 {
   "name": "@voxell/forge-ai-provider",
-  "version": "0.1.0",
-  "description": "Vercel AI SDK provider for Forge — Voxell's text-embedding API. turbo/pro/ultra (ultra = Qwen3-Embedding-8B; ~75+ avg MTEB, #4 English, top usable model), Matryoshka dims.",
+  "version": "0.1.1",
+  "description": "Vercel AI SDK provider for Forge, Voxell's hosted text-embedding API (turbo, pro, ultra tiers, Matryoshka dims). Voxell's Ingot-8B-R3 ranks #1 for English on the public MTEB leaderboard.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

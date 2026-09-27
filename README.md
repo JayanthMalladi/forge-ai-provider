@@ -5,15 +5,16 @@ text-embedding API. Use Forge with `embed` / `embedMany` like any other AI SDK p
 
 ## Why Forge
 
-- **Quality you can dial.** Forge runs the Qwen3-Embedding family; `ultra` is the **8B — ~75+
-  average task score on MTEB, currently #4 on MTEB (English)**, and the top *usable* model (the
-  three ranked above it are research-only). `turbo` (0.6B) is the fast/cheap tier — pick your
-  point on the quality/cost curve.
+- **Benchmark-leading.** Voxell's Ingot-8B-R3 ranks #1 for English on the public MTEB leaderboard
+  (English v2), with a 75.98 mean task score across 41 tasks: the top usable English embedding
+  model. See the [model card](https://huggingface.co/JCorners/Ingot-8B-R3).
+- **Quality you can dial.** `turbo` (1024d) is the fast default and `ultra` (4096d) the highest
+  quality tier. Pick your point on the quality and cost curve.
 - **Matryoshka (MRL).** Truncate to fewer dimensions (re-normalized) for ~4× smaller, cheaper
   vectors — one option, minimal quality loss.
 - **Low latency.** Served by a Go + CUDA engine; HTTP and gRPC.
 - **Zero-trust.** Per-key auth; mTLS available.
-- **Start free.** 10M tokens, no card — [dash.voxell.ai](https://dash.voxell.ai). Learn more:
+- **Start free.** `turbo` is free forever, no card: [dash.voxell.ai](https://dash.voxell.ai). Learn more:
   [voxell.ai/forge](https://voxell.ai/forge).
 
 ## Install
@@ -59,7 +60,7 @@ await embed({
 |----|-----------|-------|
 | `turbo` | 1024 | fast, low cost — **default** |
 | `pro` | 2560 | |
-| `ultra` | 4096 | Qwen3-Embedding-8B; ~75+ avg MTEB, #4 (English), top *usable* model |
+| `ultra` | 4096 | highest quality |
 
 ## Configuration
 
